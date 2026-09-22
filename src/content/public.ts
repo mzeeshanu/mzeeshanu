@@ -16,11 +16,36 @@ export const profile = {
   ],
 };
 
-export const stats = [
-  { value: "14+", label: "years building backend & data systems" },
-  { value: "min → sec", label: "critical API response time, via distributed caching" },
-  { value: "90%", label: "faster airline data processing" },
+// The headline "impact" cards — the punch lines of the page.
+export const impact = [
+  {
+    value: "Shopify ⇄ Back office",
+    label: "Custom events, always in sync",
+    text: "Event-driven integration that routes Shopify events into message processors, keeping storefront, CRM and back office in lockstep.",
+  },
+  {
+    value: "min → sec",
+    label: "Data healing & API speed",
+    text: "Distributed Redis caching took critical API responses from minutes to seconds; automated reconciliation finds and heals missed updates.",
+  },
+  {
+    value: "hrs → min",
+    label: "ETL, re-engineered",
+    text: "Cursor-based jobs rewritten and re-indexed to run in minutes; airline data pipelines up to 90% faster.",
+  },
+  {
+    value: "Ship on green",
+    label: "CI/CD pipelines",
+    text: "Automated test suites wired into every pipeline, plus a reusable framework that validates services by replaying real event messages.",
+  },
+  {
+    value: "Teams, levelled up",
+    label: "Mentoring & best practices",
+    text: "Coaching on SOLID, dependency injection and TDD through code review — and documentation that makes onboarding fast.",
+  },
 ];
+
+export const stack = ["C#", ".NET", "ASP.NET Core", "SQL Server", "Redis", "Azure", "Docker", "Shopify", "GraphQL", "REST", "Cosmos DB", "Serilog", "Datadog", "CI/CD", "Event-driven", "ETL"];
 
 export type Era = {
   id: string;           // joins to private.ts
@@ -39,14 +64,15 @@ export const eras: Era[] = [
     period: "2022 — Present",
     title: "Senior Software Engineer · Technical Lead",
     where: "Global e-commerce company",
-    headline: "Minutes, down to seconds.",
+    headline: "Shopify, in sync.",
     points: [
-      "Cut critical Subscription Management API response times from minutes to seconds with a distributed Redis cache — automatic invalidation, distributed locking and atomic operations across multi-region Azure deployments.",
-      "Designed event-driven workflows connecting the storefront, CRM and back-office systems, with automated reconciliation that finds and recovers missed updates.",
+      "Built an event-driven integration platform: Shopify custom events flow through Hookdeck into message processors that keep storefront, CRM and back-office systems in sync.",
+      "Added automated reconciliation — data healing that detects missed or out-of-order updates and repairs them without manual intervention.",
+      "Cut critical Subscription Management API response times from minutes to seconds with a distributed Redis cache: automatic invalidation, distributed locking and atomic operations across multi-region Azure deployments.",
       "Built a queue-based notification service that groups payment events, enriches them with distributor hierarchy data and delivers targeted communications.",
+      "Established an integration-testing framework and wired automated tests into CI/CD pipelines, so services are validated by replaying representative event messages.",
       "Created a reusable Serilog NuGet package with pluggable sinks — the move to Datadog became a configuration change instead of a rewrite.",
-      "Established an integration-testing framework (dependency injection, interfaces, factories) so services are validated by replaying representative event messages.",
-      "Built internal AI utilities that let non-engineering staff answer their own order-status questions.",
+      "Mentor engineers through code reviews and coaching on SOLID principles, dependency injection and TDD; built internal AI utilities for non-engineering staff.",
     ],
   },
   {
@@ -68,7 +94,7 @@ export const eras: Era[] = [
     period: "2015 — 2021",
     title: "Senior Software Engineer",
     where: "Airline technology provider",
-    headline: "Airlines, at scale.",
+    headline: "Airline data, 90% faster.",
     points: [
       "Led bidirectional ETL and secure data-exchange services that turned reservation data into analytics-ready datasets for third-party revenue-management platforms — powering dynamic fare pricing and seat inventory.",
       "Cut airline data-processing times by up to 90% by optimising SQL, stored procedures, indexing and multithreaded ETL across highly normalised databases.",
