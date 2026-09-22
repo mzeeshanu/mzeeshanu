@@ -1,0 +1,9 @@
+{
+  "basedIn": "City, Country",
+  "eras": {
+    "current": { "org": "Company", "location": "City, State", "dates": "Month Year — Present" }
+  },
+  "projects": [
+    { "name": "Project", "url": "https://example.com", "status": "Live", "summary": "One sentence." }
+  ]
+}
