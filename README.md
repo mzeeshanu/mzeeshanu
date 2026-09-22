@@ -11,7 +11,7 @@
 <details>
 <summary>About this repo</summary>
 
-This repository is also the source of [mzeeshanu.com](https://mzeeshanu.com) — a Next.js site on Vercel.
+This repository is also the source of [mzeeshanu.com](https://mzeeshanu.com) — a Next.js site deployed on Railway.
 
 ```bash
 npm install
